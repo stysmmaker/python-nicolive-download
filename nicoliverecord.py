@@ -66,7 +66,7 @@ def downloadCommunityStream(rtmp_path, info):
 
 def downloadStream(rtmp_path, info):
     provider_type = info['provider_type']
-    if (provider_type == "channel"):
+    if (provider_type in {"channel","official"}):
         downloadChannelStream(rtmp_path, info)
     elif (provider_type == "community"):
         downloadCommunityStream(rtmp_path, info)
